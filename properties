@@ -1,0 +1,13 @@
+spring.datasource.driverClassName=com.mysql.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/good?useUnicode=true&characterEncoding=utf8
+spring.datasource.username=root
+spring.datasource.password=root
+mybatis.mapper-locations=classpath:mapper/*Mapper.xml
+#hystirx  与feign进行整合
+feign.hystrix.enabled=true
+#标注 feign访问接口多少时间没有返回值 报错
+hystrix.command.default.execution.timeout.enabled=true    #default全局有效，service id指定应用有效
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=6000
+
+ribbon.ReadTimeout=6000
+ribbon.ConnectTimeout=6000
